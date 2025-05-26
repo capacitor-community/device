@@ -9,14 +9,22 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "Device")
 public class DevicePlugin extends Plugin {
 
-    private Device implementation = new Device();
+    private Device implementation;
+
+    @Override
+    public void load() {
+        implementation = new Device();
+    }
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void getInfo(PluginCall call) {
+        JSObject r = new JSObject();
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+        r.put("diskFree", implementation.getDiskFree());
+        r.put("diskTotal", implementation.getDiskTotal());
+        r.put("realDiskFree", implementation.getRealDiskFree());
+        r.put("realDiskTotal", implementation.getRealDiskTotal());
+
+        call.resolve(r);
     }
 }

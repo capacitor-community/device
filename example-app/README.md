@@ -9,3 +9,5 @@ OR
 ```bash
 npm run build:dev:ios:sync:open
 ```
+
+This will build the example app, sync it with the native platforms, and open it in Android Studio or Xcode, respectively.

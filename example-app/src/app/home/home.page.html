@@ -15,14 +15,20 @@
 
   <ion-toolbar class="button-toolbar">
     <ion-buttons>
-      <ion-button color="primary" fill="solid" (click)="echo()">Echo</ion-button>
+      <ion-button color="primary" fill="solid" (click)="showDeviceInfo()">Show Device Info</ion-button>
     </ion-buttons>
   </ion-toolbar>
 
-  <!-- <ion-toolbar class="button-toolbar">
-    <ion-buttons>
-      <ion-button color="primary" fill="solid" (click)="checkPinStatus()">Check Pin Status</ion-button>
-    </ion-buttons>
-  </ion-toolbar> -->
+  <ion-card *ngIf="deviceInfo">
+    <ion-card-header>
+      <ion-card-title>Device Information</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Disk Free:</strong> {{ deviceInfo.diskFree }}</p>
+      <p><strong>Disk Total:</strong> {{ deviceInfo.diskTotal }}</p>
+      <p><strong>Real Disk Free:</strong> {{ deviceInfo.realDiskFree }}</p>
+      <p><strong>Real Disk Total:</strong> {{ deviceInfo.realDiskTotal }}</p>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

@@ -10,14 +10,21 @@ public class DevicePlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "DevicePlugin"
     public let jsName = "Device"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "getInfo", returnType: CAPPluginReturnPromise),
     ]
     private let implementation = Device()
 
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
+    @objc func getInfo(_ call: CAPPluginCall) {
+
+        let diskFree = implementation.getFreeDiskSize() ?? 0
+        let realDiskFree = implementation.getRealFreeDiskSize() ?? 0
+        let diskTotal = implementation.getTotalDiskSize() ?? 0
+
         call.resolve([
-            "value": implementation.echo(value)
+            "diskFree": diskFree,
+            "diskTotal": diskTotal,
+            "realDiskFree": realDiskFree,
+            "realDiskTotal": diskTotal,
         ])
     }
 }
