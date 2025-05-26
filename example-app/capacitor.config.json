@@ -1,0 +1,10 @@
+{
+  "appId": "com.ryltsov.alex.plugins.device.example",
+  "appName": "Device Example App",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
