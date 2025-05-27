@@ -1,7 +1,7 @@
 {
   "name": "@capacitor-community/device",
   "version": "7.0.0",
-  "description": "This plugin offers the API which has been removed from @capacitor/device plugin in v7.0 (getInfo() no longer returns diskFree, diskTotal, realDiskFree and realDiskTotal) as some apps still require this",
+  "description": "This plugin offers the API which has been removed from @capacitor/device plugin in v7.0 (getInfo() no longer returns diskFree, diskTotal, realDiskFree and realDiskTotal)",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -15,6 +15,9 @@
     "Package.swift",
     "CapacitorCommunityDevice.podspec"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "Alex Ryltsov",
     "email": "ryltsov.alex@gmail.com"
