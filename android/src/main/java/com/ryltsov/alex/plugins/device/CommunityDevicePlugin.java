@@ -6,14 +6,14 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "Device")
-public class DevicePlugin extends Plugin {
+@CapacitorPlugin(name = "CommunityDevice")
+public class CommunityDevicePlugin extends Plugin {
 
-    private Device implementation;
+    private CommunityDevice implementation;
 
     @Override
     public void load() {
-        implementation = new Device();
+        implementation = new CommunityDevice();
     }
 
     @PluginMethod

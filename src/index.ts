@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { DevicePlugin } from './definitions';
+import type { CommunityDevicePlugin } from './definitions';
 
-const Device = registerPlugin<DevicePlugin>('Device', {
-  web: () => import('./web').then((m) => new m.DeviceWeb()),
+const CommunityDevice = registerPlugin<CommunityDevicePlugin>('CommunityDevice', {
+  web: () => import('./web').then((m) => new m.CommunityDeviceWeb()),
 });
 
 export * from './definitions';
-export { Device };
+export { CommunityDevice };

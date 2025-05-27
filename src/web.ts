@@ -1,9 +1,9 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { DeviceInfo, DevicePlugin } from './definitions';
+import type { CommunityDeviceInfo, CommunityDevicePlugin } from './definitions';
 
-export class DeviceWeb extends WebPlugin implements DevicePlugin {
-  async getInfo(): Promise<DeviceInfo> {
+export class CommunityDeviceWeb extends WebPlugin implements CommunityDevicePlugin {
+  async getInfo(): Promise<CommunityDeviceInfo> {
     throw this.unavailable('getInfo is not supported on web');
   }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-@objc public class Device: NSObject {
+@objc public class CommunityDevice: NSObject {
     /**
      * Get free disk space
      */

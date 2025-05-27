@@ -1,11 +1,9 @@
 package com.ryltsov.alex.plugins.device;
 
-import android.content.Context;
 import android.os.Environment;
 import android.os.StatFs;
-import android.util.Log;
 
-public class Device {
+public class CommunityDevice {
 
     public long getDiskFree() {
         StatFs statFs = new StatFs(Environment.getRootDirectory().getAbsolutePath());

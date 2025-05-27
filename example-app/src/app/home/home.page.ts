@@ -5,7 +5,7 @@ import {
 } from '@ionic/angular/standalone';
 
 // NATIVE
-import { Device, DeviceInfo } from '@capacitor-community/device';
+import { CommunityDevice, CommunityDeviceInfo } from '@capacitor-community/device';
 
 @Component({
   selector: 'app-home',
@@ -17,13 +17,13 @@ import { Device, DeviceInfo } from '@capacitor-community/device';
 })
 export class HomePage {
 
-  public deviceInfo: DeviceInfo | undefined;
+  public deviceInfo: CommunityDeviceInfo | undefined;
 
   constructor() { }
 
   public async showDeviceInfo(): Promise<void> {
     try {
-      const info: DeviceInfo = await Device.getInfo();
+      const info: CommunityDeviceInfo = await CommunityDevice.getInfo();
       console.log('info', info);
       this.deviceInfo = info;
     } catch (error) {

@@ -1,8 +1,4 @@
-// export interface DevicePlugin {
-//   echo(options: { value: string }): Promise<{ value: string }>;
-// }
-
-export interface DeviceInfo {
+export interface CommunityDeviceInfo {
   /**
    * How much free disk space is available on the normal data storage
    * path for the os, in bytes.
@@ -42,11 +38,11 @@ export interface DeviceInfo {
   realDiskTotal?: number;
 }
 
-export interface DevicePlugin {
+export interface CommunityDevicePlugin {
   /**
    * Return information about the underlying device/os/platform.
    *
    * @since 7.0.0
    */
-  getInfo(): Promise<DeviceInfo>;
+  getInfo(): Promise<CommunityDeviceInfo>;
 }

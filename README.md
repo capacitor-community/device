@@ -39,7 +39,7 @@ This plugin offers the API which has been removed from @capacitor/device plugin 
 
 ## About
 
-This plugin offers the API which has been removed from `@capacitor/device` plugin in v7.0 (getInfo() no longer returns diskFree, diskTotal, realDiskFree and realDiskTotal) as some apps still require this. For more details also see https://capacitorjs.com/docs/updating/7-0#device
+This plugin offers the API which has been removed from `@capacitor/device` plugin in v7.0 (getInfo() no longer returns diskFree, diskTotal, realDiskFree and realDiskTotal). For more details also see https://capacitorjs.com/docs/updating/7-0#device
 
 This plugin contains code derived from or inspired by [@capacitor/device](https://github.com/ionic-team/capacitor-plugins/tree/main/device) plugin.
 Please note that it is a community plugin, not maintained by the Capacitor team.
@@ -104,10 +104,10 @@ For detailed steps on how to do this, please see the [Capacitor Docs](https://ca
 ## Example Plugin Usage
 
 ```typescript
-import { Device } from '@capacitor-community/device';
+import { CommunityDevice } from '@capacitor-community/device';
 
 const logDeviceInfo = async () => {
-  const info = await Device.getInfo();
+  const info = await CommunityDevice.getInfo();
 
   console.log(info);
 };
@@ -117,8 +117,8 @@ const logDeviceInfo = async () => {
 
 <docgen-index>
 
-* [`getInfo()`](#getinfo)
-* [Interfaces](#interfaces)
+- [`getInfo()`](#getinfo)
+- [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -128,22 +128,20 @@ const logDeviceInfo = async () => {
 ### getInfo()
 
 ```typescript
-getInfo() => Promise<DeviceInfo>
+getInfo() => Promise<CommunityDeviceInfo>
 ```
 
 Return information about the underlying device/os/platform.
 
-**Returns:** <code>Promise&lt;<a href="#deviceinfo">DeviceInfo</a>&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#communitydeviceinfo">CommunityDeviceInfo</a>&gt;</code>
 
 **Since:** 7.0.0
 
---------------------
-
+---
 
 ### Interfaces
 
-
-#### DeviceInfo
+#### CommunityDeviceInfo
 
 | Prop                | Type                | Description                                                                                                                                                                                                                     | Since |
 | ------------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
