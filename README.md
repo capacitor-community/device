@@ -10,7 +10,7 @@ This plugin offers the API which has been removed from @capacitor/device plugin 
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2025?style=flat-square" />
+  <img src="https://img.shields.io/maintenance/yes/2026?style=flat-square" />
   <a href="https://www.npmjs.com/package/@capacitor-community/device"><img src="https://img.shields.io/npm/l/@capacitor-community/device?style=flat-square" /></a>
   <br>
   <a href="https://www.npmjs.com/package/@capacitor-community/device"><img src="https://img.shields.io/npm/dw/@capacitor-community/device?style=flat-square" /></a>
@@ -117,8 +117,8 @@ const logDeviceInfo = async () => {
 
 <docgen-index>
 
-- [`getInfo()`](#getinfo)
-- [Interfaces](#interfaces)
+* [`getInfo()`](#getinfo)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -137,9 +137,11 @@ Return information about the underlying device/os/platform.
 
 **Since:** 7.0.0
 
----
+--------------------
+
 
 ### Interfaces
+
 
 #### CommunityDeviceInfo
 

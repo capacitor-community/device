@@ -6,7 +6,8 @@ import Foundation
      */
     public func getFreeDiskSize() -> Int64? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        if let dictionary = try? FileManager.default.attributesOfFileSystem(forPath: paths.last!) {
+        guard let lastPath = paths.last else { return nil }
+        if let dictionary = try? FileManager.default.attributesOfFileSystem(forPath: lastPath) {
             if let freeSize = dictionary[FileAttributeKey.systemFreeSize] as? NSNumber {
                 return freeSize.int64Value
             }
@@ -19,7 +20,8 @@ import Foundation
      */
     public func getRealFreeDiskSize() -> Int64? {
         do {
-            let values = try URL(fileURLWithPath: NSHomeDirectory() as String).resourceValues(forKeys: [URLResourceKey.volumeAvailableCapacityForImportantUsageKey])
+            let homeURL = URL(fileURLWithPath: NSHomeDirectory())
+            let values = try homeURL.resourceValues(forKeys: [.volumeAvailableCapacityForImportantUsageKey])
             if let available = values.volumeAvailableCapacityForImportantUsage {
                 return available
             } else {
@@ -35,7 +37,8 @@ import Foundation
      */
     public func getTotalDiskSize() -> Int64? {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        if let dictionary = try? FileManager.default.attributesOfFileSystem(forPath: paths.last!) {
+        guard let lastPath = paths.last else { return nil }
+        if let dictionary = try? FileManager.default.attributesOfFileSystem(forPath: lastPath) {
             if let freeSize = dictionary[FileAttributeKey.systemSize] as? NSNumber {
                 return freeSize.int64Value
             }
