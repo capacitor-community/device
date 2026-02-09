@@ -10,7 +10,7 @@ public class CommunityDevicePlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "CommunityDevicePlugin"
     public let jsName = "CommunityDevice"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "getInfo", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getInfo", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = CommunityDevice()
 
@@ -24,7 +24,7 @@ public class CommunityDevicePlugin: CAPPlugin, CAPBridgedPlugin {
             "diskFree": diskFree,
             "diskTotal": diskTotal,
             "realDiskFree": realDiskFree,
-            "realDiskTotal": diskTotal,
+            "realDiskTotal": diskTotal
         ])
     }
 }

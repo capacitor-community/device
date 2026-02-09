@@ -24,5 +24,4 @@ public class CommunityDevice {
         StatFs statFs = new StatFs(Environment.getDataDirectory().getAbsolutePath());
         return statFs.getBlockCountLong() * statFs.getBlockSizeLong();
     }
-
 }
