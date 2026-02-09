@@ -48,12 +48,13 @@ Please note that it is a community plugin, not maintained by the Capacitor team.
 
 - support reading diskFree, diskTotal, realDiskFree and realDiskTotal
 
-**NOTE**: The plugin version 7.0.0 is compatible with Capacitor 7
+**NOTE**: The plugin version 8.0.0 is compatible with Capacitor 8
 
 ## Plugin versions
 
 | Capacitor version | Plugin version |
 | ----------------- | -------------- |
+| 8.x               | 8.x            |
 | 7.x               | 7.x            |
 
 ## Supported Platforms
